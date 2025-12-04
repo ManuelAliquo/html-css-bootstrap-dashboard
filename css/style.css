@@ -1,0 +1,7 @@
+.form-control::placeholder {
+  color: #899097;
+}
+
+.navbar-brand {
+  width: 6vh;
+}
