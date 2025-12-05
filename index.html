@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/duck.png" />
     <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
@@ -28,7 +29,6 @@
           </a>
           <button
             class="navbar-toggler"
-            type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
@@ -49,16 +49,18 @@
                 <a class="nav-link" href="#">Storico Prestiti</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-disabled="true">Help</a>
+                <a class="nav-link" aria-="true">Help</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
               <input
-                class="form-control bg-white me-2"
+                class="form-control me-2"
                 type="search"
                 placeholder="Cerca..."
                 aria-label="Search"
+                data-bs-theme="light"
               />
+              <!-- Correzione: prima prova data-bs-theme, non bg-color ecc -->
               <button class="btn btn-outline-light" type="submit">Cerca</button>
             </form>
           </div>
@@ -66,17 +68,23 @@
       </nav>
     </header>
     <main>
+      <!-- APPUNTO PER IL LAYOUT A COLONNE, DEVI RACCHIUDERE TUTTO IL CONTENUTO DEL MAIN IN 1 ROW, E DIVIDERE IN 2 COLONNE:
+       1 CHE RACCHIUDE INTESTAZIONE E TABELLA E 1 CHE RACCHIUDE LE DUE CARD -->
+
       <div class="container d-lg-flex justify-content-center gap-4">
         <div class="catalog-section">
+          <!-- Intestazione pagina -->
           <div class="my-4 d-flex align-items-center justify-content-between">
-            <h3 class="d-inline fw-normal mb-0">Catalogo Libri</h3>
-            <button type="button" class="btn btn-primary">Aggiungi Libro</button>
+            <h1 class="h3 d-inline fw-normal mb-0">Catalogo Libri</h1>
+            <!-- Correzione: si può dare la classe "h1-h6" -->
+            <a href="./new-book.html" role="button" class="btn btn-primary">Aggiungi Libro</a>
           </div>
           <!-- Table section -->
           <table class="table table-striped">
             <thead>
               <th>Titolo</th>
-              <th class="d-none d-md-table-cell">Data prestito</th>
+              <th class="d-none d-md-table-cell text-nowrap">Data prestito</th>
+              <!-- Correzione: per non far andare a capo il testo usa "text-nowrap" -->
               <th>Stato</th>
               <th class="text-center">Azioni</th>
             </thead>
@@ -85,19 +93,12 @@
                 <td>I pilastri della terra</td>
                 <td class="d-none d-md-table-cell">-</td>
                 <td><span class="badge text-bg-success">Disponibile</span></td>
-                <td class="btn-cell text-center">
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                <td class="d-flex justify-content-center text-center">
+                  <!-- Correzione: per non far andare a capo degli elementi puoi usare flex -->
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-pencil-fill"></i>
                   </button>
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -106,19 +107,11 @@
                 <td>I promessi sposi</td>
                 <td class="d-none d-md-table-cell">-</td>
                 <td><span class="badge text-bg-success">Disponibile</span></td>
-                <td class="btn-cell text-center" s="w-105px">
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                <td class="d-flex justify-content-center text-center" s="w-105px">
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-pencil-fill"></i>
                   </button>
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -127,19 +120,11 @@
                 <td>Il signore degli anelli</td>
                 <td class="d-none d-md-table-cell">18/10/2023</td>
                 <td><span class="badge text-white bg-warning">In prestito</span></td>
-                <td class="btn-cell text-center" s="w-105px">
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                <td class="d-flex justify-content-center text-center" s="w-105px">
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-pencil-fill"></i>
                   </button>
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -148,19 +133,11 @@
                 <td>Harry Potter e la pietra filosofale</td>
                 <td class="d-none d-md-table-cell">-</td>
                 <td><span class="badge text-bg-success">Disponibile</span></td>
-                <td class="btn-cell text-center" s="w-105px">
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                <td class="d-flex justify-content-center text-center" s="w-105px">
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-pencil-fill"></i>
                   </button>
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -169,19 +146,11 @@
                 <td>Il codice Da Vinci</td>
                 <td class="d-none d-md-table-cell">-</td>
                 <td><span class="badge text-bg-danger">Non disponibile</span></td>
-                <td class="btn-cell text-center" s="w-105px">
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                <td class="d-flex justify-content-center text-center" s="w-105px">
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-pencil-fill"></i>
                   </button>
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -190,19 +159,11 @@
                 <td>Shining</td>
                 <td class="d-none d-md-table-cell">-</td>
                 <td><span class="badge text-bg-success">Disponibile</span></td>
-                <td class="btn-cell text-center" s="w-105px">
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                <td class="d-flex justify-content-center text-center" s="w-105px">
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-pencil-fill"></i>
                   </button>
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -211,19 +172,11 @@
                 <td>La divina commedia</td>
                 <td class="d-none d-md-table-cell">21/09/2023</td>
                 <td><span class="badge text-white bg-warning">In prestito</span></td>
-                <td class="btn-cell text-center" s="w-105px">
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                <td class="d-flex justify-content-center text-center" s="w-105px">
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-pencil-fill"></i>
                   </button>
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -232,19 +185,11 @@
                 <td>Il trono di spade</td>
                 <td class="d-none d-md-table-cell">-</td>
                 <td><span class="badge text-bg-success">Disponibile</span></td>
-                <td class="btn-cell text-center" s="w-105px">
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                <td class="d-flex justify-content-center text-center" s="w-105px">
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-pencil-fill"></i>
                   </button>
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -253,19 +198,11 @@
                 <td>Il mondo di Sofia</td>
                 <td class="d-none d-md-table-cell">-</td>
                 <td><span class="badge text-bg-danger">Non disponibile</span></td>
-                <td class="btn-cell text-center" s="w-105px">
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                <td class="d-flex justify-content-center text-center" s="w-105px">
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-pencil-fill"></i>
                   </button>
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -274,19 +211,11 @@
                 <td>Le cronache di Narnia: il leone, la strega e l'armadio</td>
                 <td class="d-none d-md-table-cell">25/07/2023</td>
                 <td><span class="badge text-white bg-warning">In prestito</span></td>
-                <td class="btn-cell text-center" s="w-105px">
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                <td class="d-flex justify-content-center text-center" s="w-105px">
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-pencil-fill"></i>
                   </button>
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -295,19 +224,11 @@
                 <td>Il piccolo principe</td>
                 <td class="d-none d-md-table-cell">-</td>
                 <td><span class="badge text-bg-success">Disponibile</span></td>
-                <td class="btn-cell text-center" s="w-105px">
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                <td class="d-flex justify-content-center text-center" s="w-105px">
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-pencil-fill"></i>
                   </button>
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -316,19 +237,11 @@
                 <td>La storia infinita</td>
                 <td class="d-none d-md-table-cell">-</td>
                 <td><span class="badge text-bg-success">Disponibile</span></td>
-                <td class="btn-cell text-center" s="w-105px">
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                <td class="d-flex justify-content-center text-center" s="w-105px">
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-pencil-fill"></i>
                   </button>
-                  <button
-                    type="button"
-                    class="btn bg-transparent btn-outline-dark text-dark"
-                    disabled
-                  >
+                  <button class="btn bg-transparent btn-outline-dark text-dark">
                     <i class="bi bi-trash3-fill"></i>
                   </button>
                 </td>
@@ -396,7 +309,6 @@
                 <h2 class="accordion-header">
                   <button
                     class="accordion-button collapsed"
-                    type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne"
                     aria-expanded="false"
@@ -425,7 +337,6 @@
                 <h2 class="accordion-header">
                   <button
                     class="accordion-button collapsed"
-                    type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo"
                     aria-expanded="false"
@@ -452,7 +363,6 @@
                 <h2 class="accordion-header">
                   <button
                     class="accordion-button collapsed"
-                    type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseThree"
                     aria-expanded="false"
