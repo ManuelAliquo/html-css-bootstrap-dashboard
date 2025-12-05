@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/duck.png" />
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -12,10 +13,10 @@
     />
     <!-- My CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
+    <title>Aggiungi un Libro</title>
   </head>
   <body>
-    <header>
+    <header class="mb-4">
       <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="./index.html">
@@ -63,9 +64,43 @@
       </nav>
     </header>
     <main>
-      <div class="container">
-        <form action="" class="row"></form>
-      </div>
+      <form action="" class="container">
+        <div class="row gy-3">
+          <!-- Intestazione Pagina -->
+          <div class="col-12">
+            <h1 class="h2">Nuovo Libro</h1>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-6">
+                <label for="basic-url" class="form-label">Nome Autore</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Inserisci il nome dell'autore"
+                />
+              </div>
+              <div class="col-6">
+                <label for="basic-url" class="form-label">Cognome Autore</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Inserisci il cognome dell'autore"
+                />
+              </div>
+              <div class="col">
+                <label for="basic-url" class="form-label mt-3">Titolo</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Inserisci il titolo del libro"
+                />
+                <div class="form-text">Titolo versione italiana</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
