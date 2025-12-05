@@ -1,3 +1,7 @@
 .navbar-brand {
   width: 8vh;
 }
+
+.custom-textarea {
+  height: 80px;
+}
