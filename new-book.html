@@ -68,7 +68,7 @@
         <!-- Intestazione Pagina -->
         <h1 class="h2">Nuovo Libro</h1>
         <!-- Form -->
-        <form action="" class="d-flex flex-column gap-3">
+        <form action="./index.html" class="d-flex flex-column gap-3">
           <!-- Nome/Cognome/Titolo -->
           <div class="row">
             <div class="col-6">
@@ -102,7 +102,7 @@
           </div>
           <!-- Genere/Anno/ISBN -->
           <div class="row gy-3">
-            <div class="col">
+            <div class="col col-lg-4">
               <label for="gerne-select" class="form-label">Genere</label>
               <select id="gerne-select" class="form-select" aria-label="Genre Select">
                 <option selected>Scegli il genere</option>
@@ -111,7 +111,7 @@
                 <option value="3">Fantascienza</option>
               </select>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-lg-4">
               <label for="publishing-year" class="form-label">Anno di Pubblicazione</label>
               <input
                 id="publishing-year"
@@ -120,7 +120,7 @@
                 placeholder="Inserisci l'anno"
               />
             </div>
-            <div class="col-12">
+            <div class="col-12 col-lg-4">
               <label for="isbn-code" class="form-label">ISBN#</label>
               <input
                 id="isbn-code"
